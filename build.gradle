@@ -19,7 +19,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "1.0"
+version = "1.12.1-0.0.1.0"
 group = "net.tinzin.forge.nurma" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "nurma"
 
@@ -46,7 +46,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.elytradev:mirage:2.0.2-SNAPSHOT'
+    compile 'com.elytradev:mirage:2.0.3-rc1-SNAPSHOT'
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"

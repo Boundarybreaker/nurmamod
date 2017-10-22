@@ -96,6 +96,11 @@ public class TileEntityGrinder extends TileEntity {
                 packet = new PacketResultSound(pos,true);
                 Nurma.network.sendToAllAround(packet, new NetworkRegistry.TargetPoint(world.provider.getDimension(), pos.getX(), pos.getY(), pos.getZ(), 64));
             }
+            if(stack.getItem() ==  Item.getItemFromBlock(Blocks.STONE) && stack.getMetadata() == 5){ // andesite
+                inventory.setStackInSlot(0, new ItemStack(Item.getItemFromBlock(ModBlocks.inkstone)));
+                packet = new PacketResultSound(pos,true);
+                Nurma.network.sendToAllAround(packet, new NetworkRegistry.TargetPoint(world.provider.getDimension(), pos.getX(), pos.getY(), pos.getZ(), 64));
+            }
         }
     }
 }
