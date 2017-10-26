@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -40,6 +41,11 @@ public class Nurma {
     public static final NurmaTab creativeTab = new NurmaTab();
     public static final ToolTab toolsTab = new ToolTab();
 
+    static {
+        //blame Falkreon if this breaks something
+        FluidRegistry.enableUniversalBucket();
+    }
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         System.out.println(name + " is loading!");
@@ -47,6 +53,9 @@ public class Nurma {
 
         network = NetworkRegistry.INSTANCE.newSimpleChannel(modId);
         network.registerMessage(new PacketResultSound.Handler(), PacketResultSound.class, 0, Side.CLIENT);
+
+
+
     }
 
     @Mod.EventHandler
@@ -77,6 +86,7 @@ public class Nurma {
 
         @SubscribeEvent
         public static void registerBlocks(RegistryEvent.Register<Block> event) {
+
             ModBlocks.register(event.getRegistry());
         }
     }

@@ -11,14 +11,12 @@ public class ItemBase extends Item {
 
     public ItemBase(String name) {
         this.name = name;
-        setUnlocalizedName(name);
+        setUnlocalizedName(Nurma.modId+"."+name);
         setRegistryName(name);
     }
 
     public ItemBase(String name, int maxStack) {
-        this.name = name;
-        setUnlocalizedName(name);
-        setRegistryName(name);
+        this(name);
         this.maxStackSize = maxStack;
     }
 
