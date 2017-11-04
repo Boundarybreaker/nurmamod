@@ -1,4 +1,6 @@
-# nurmamod
+<img src="https://github.com/deli73/nurmamod/raw/master/Nurma.png" align="right" width="180px"/>
+
+# Nurma Manros - Words of Power
 ## credits:
 code by [Tinzin](https://github.com/deli73)
 
